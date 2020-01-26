@@ -28,19 +28,19 @@ public class Worker {
   public static void main(String[] args) throws IOException, KeeperException, InterruptedException {
     final Worker worker = new Worker();
     worker.connectToZookeeper();
+    worker.addWorkerZnode();
     worker.work();
   }
 
   // Private
 
   private void connectToZookeeper() throws IOException {
+    System.out.println("New worker is connecting to Zoo...");
     mZooKeeper = new ZooKeeper(ZOOKEEPER_ADDRESS, SESSION_TIMEOUT, watchedEvent -> {
     });
   }
 
   private void work() throws KeeperException, InterruptedException {
-    addWorkerZnode();
-
     while (true) {
       System.out.println("Working...");
 
@@ -54,6 +54,7 @@ public class Worker {
   }
 
   private void addWorkerZnode() throws KeeperException, InterruptedException {
-    mZooKeeper.create(ZNODES_PATH + "worker_", new byte[]{}, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+    System.out.println("Adding worker's znode...");
+    mZooKeeper.create(ZNODES_PATH + "/worker_", new byte[]{}, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
   }
 }

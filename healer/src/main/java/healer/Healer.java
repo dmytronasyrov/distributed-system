@@ -1,9 +1,11 @@
 package healer;
 
 import org.apache.zookeeper.*;
+import org.apache.zookeeper.data.Stat;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class Healer implements Watcher {
 
@@ -17,7 +19,7 @@ public class Healer implements Watcher {
 
   private final int mNumOfWorkers;
   private final String mPathToProgram;
-  private ZooKeeper mZooKeeper;
+  private final ZooKeeper mZooKeeper;
 
   // Main
 
@@ -31,54 +33,77 @@ public class Healer implements Watcher {
     String pathToWorkerJar = args[1];
 
     final Healer healer = new Healer(numOfWorkers, pathToWorkerJar);
-    healer.connectToZookeeper();
-    healer.addWorkerZnode();
-    healer.createWorkers();
     healer.watchWorkers();
+    healer.autoHeal();
     healer.run();
     healer.close();
   }
 
   // Constructors
 
-  private Healer(int numOfWorkers, String pathToProgram) {
+  private Healer(int numOfWorkers, String pathToProgram) throws IOException {
     mPathToProgram = pathToProgram;
     mNumOfWorkers = numOfWorkers;
+    mZooKeeper = new ZooKeeper(ZOOKEEPER_ADDRESS, SESSION_TIMEOUT, watchedEvent -> {});
   }
 
   // Overrides
+
+  // Private
 
   @Override
   public void process(WatchedEvent watchedEvent) {
     switch (watchedEvent.getType()) {
       case None:
-        if (watchedEvent.getState() == Event.KeeperState.SyncConnected) {
-          System.out.println("Successfully connected to Zookeeper");
-        } else {
-          synchronized (mZooKeeper) {
-            System.out.println("Disconnected from Zookeeper event");
-            mZooKeeper.notifyAll();
-          }
-        }
+        onZooConnectionEvent(watchedEvent);
+        break;
+
+      case NodeCreated:
+        System.out.println("New Znode created: " + watchedEvent.getPath());
+        break;
+
+      case NodeDeleted:
+        System.out.println("Znode deleted: " + watchedEvent.getPath());
+        break;
+
+      case NodeChildrenChanged:
+        System.out.println("Znode's children changed: " + watchedEvent.getPath());
+        autoHeal();
+        break;
+
+      case NodeDataChanged:
+        System.out.println("Znode's data changed: " + watchedEvent.getPath());
+        break;
+
+      default:
         break;
     }
   }
 
   // Private
 
-  private void connectToZookeeper() throws IOException {
-    mZooKeeper = new ZooKeeper(ZOOKEEPER_ADDRESS, SESSION_TIMEOUT, watchedEvent -> {
-    });
-  }
+  private void watchWorkers() throws KeeperException, InterruptedException {
+    System.out.println("Starting to watch workers...");
+    final Stat stat = mZooKeeper.exists(ZNODES_PATH, this);
 
-  private void addWorkerZnode() throws KeeperException, InterruptedException {
-    if (mZooKeeper.exists(ZNODES_PATH, false) == null)
+    if (stat == null)
       mZooKeeper.create(ZNODES_PATH, new byte[]{}, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+
+    final byte[] data = mZooKeeper.getData(ZNODES_PATH, this, stat);
+    final List<String> children = mZooKeeper.getChildren(ZNODES_PATH, this);
+    System.out.println("Data: " + new String(data) + ", children: " + children);
   }
 
-  private void createWorkers() throws IOException {
-    for (int i = 0; i < mNumOfWorkers; i++)
-      createWorker();
+  private void autoHeal() {
+    try {
+      final List<String> children = mZooKeeper.getChildren(ZNODES_PATH, this);
+      System.out.println("Children: " + children);
+
+      if (children.size() < mNumOfWorkers)
+        createWorker();
+    } catch (KeeperException | InterruptedException | IOException e) {
+      e.printStackTrace();
+    }
   }
 
   private void createWorker() throws IOException {
@@ -86,10 +111,7 @@ public class Healer implements Watcher {
     final File file = new File(mPathToProgram);
     final String runCommand = "java -jar " + file.getName();
     Runtime.getRuntime().exec(runCommand, null, file.getParentFile());
-  }
-
-  private void watchWorkers() {
-
+    System.out.println("Worker created");
   }
 
   private void run() throws InterruptedException {
@@ -100,5 +122,16 @@ public class Healer implements Watcher {
 
   private void close() throws InterruptedException {
     mZooKeeper.close();
+  }
+
+  private void onZooConnectionEvent(WatchedEvent watchedEvent) {
+    if (watchedEvent.getState() == Event.KeeperState.SyncConnected) {
+      System.out.println("Successfully connected to Zookeeper");
+    } else {
+      synchronized (mZooKeeper) {
+        System.out.println("Disconnected from Zookeeper event");
+        mZooKeeper.notifyAll();
+      }
+    }
   }
 }

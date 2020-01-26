@@ -1,0 +1,1 @@
+zkServer start-foreground /Users/rudra/Downloads/apache-zookeeper-3.5.6/conf/zoo.cfg

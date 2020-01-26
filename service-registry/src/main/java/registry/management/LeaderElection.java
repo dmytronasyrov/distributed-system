@@ -14,13 +14,15 @@ public class LeaderElection implements Watcher {
 
   // Variables
 
-  private ZooKeeper mZooKeeper;
+  private final ZooKeeper mZooKeeper;
+  private final OnElectionCallback mCallback;
   private String mCurrentZnodeName;
 
   // Constructors
 
-  public LeaderElection(ZooKeeper zooKeeper) {
+  public LeaderElection(ZooKeeper zooKeeper, OnElectionCallback callback) {
     mZooKeeper = zooKeeper;
+    mCallback = callback;
   }
 
   // Overrides
@@ -57,6 +59,7 @@ public class LeaderElection implements Watcher {
       final String smallestChild = children.get(0);
 
       if (smallestChild.equals(mCurrentZnodeName)) {
+        mCallback.onElectedToBeLeader();
         System.out.println("I'm the leader");
         return;
       } else {
@@ -69,6 +72,8 @@ public class LeaderElection implements Watcher {
 
       System.out.println("I'm not the leader, " + smallestChild + " is the leader");
     }
+
+    mCallback.onWorker();
 
     System.out.println("Watching znode: " + predecessorZnodeName + "\n");
   }

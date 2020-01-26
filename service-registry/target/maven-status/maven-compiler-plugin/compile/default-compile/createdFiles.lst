@@ -1,0 +1,7 @@
+registry/Application.class
+registry/management/ServiceRegistry.class
+registry/management/OnElectionCallback.class
+registry/management/LeaderElection.class
+registry/management/OnElectionAction.class
+registry/Application$1.class
+registry/management/LeaderElection$1.class

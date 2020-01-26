@@ -46,7 +46,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>registry.ServiceRegistry</mainClass>
+                            <mainClass>registry.Application</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

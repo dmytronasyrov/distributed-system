@@ -13,5 +13,6 @@
         <module>leader-election</module>
         <module>worker</module>
         <module>healer</module>
+        <module>service-registry</module>
     </modules>
 </project>

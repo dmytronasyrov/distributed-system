@@ -1,9 +1,13 @@
 package worker;
 
+import org.apache.zookeeper.CreateMode;
+import org.apache.zookeeper.KeeperException;
+import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 
 import java.io.IOException;
 import java.util.Random;
+import java.util.concurrent.locks.LockSupport;
 
 public class Worker {
 
@@ -12,7 +16,7 @@ public class Worker {
   private static final String ZOOKEEPER_ADDRESS = "localhost:2181";
   private static final int SESSION_TIMEOUT = 3000;
   private static final String ZNODES_PATH = "/workers";
-  private static final float CHANGE_TO_FAIL = 0.1f;
+  private static final float CHANCE_TO_FAIL = 0.1f;
 
   // Variables
 
@@ -21,7 +25,7 @@ public class Worker {
 
   // Main
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException, KeeperException, InterruptedException {
     final Worker worker = new Worker();
     worker.connectToZookeeper();
     worker.work();
@@ -34,7 +38,22 @@ public class Worker {
     });
   }
 
-  private void work() {
+  private void work() throws KeeperException, InterruptedException {
+    addWorkerZnode();
 
+    while (true) {
+      System.out.println("Working...");
+
+      LockSupport.parkNanos(1000000000);
+
+      if (mRandom.nextFloat() < CHANCE_TO_FAIL) {
+        System.out.println("Worker is failing...");
+        throw new RuntimeException("Shit, I'm failing!");
+      }
+    }
+  }
+
+  private void addWorkerZnode() throws KeeperException, InterruptedException {
+    mZooKeeper.create(ZNODES_PATH + "worker_", new byte[]{}, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
   }
 }

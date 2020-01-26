@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f2f24b0-6da2-4595-82ad-1c38f7243d5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/zookeeper/data/myid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/zookeeper/data/version-2/log.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/zookeeper/data/version-2/log.11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/zookeeper/data/version-2/snapshot.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/zookeeper/data/version-2/snapshot.10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-election.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/runLeaderElection.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leader/LeaderElection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leader/LeaderElection$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leader/LeaderElection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/leader.election-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/leader.election-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/worker/src/main/java/worker/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/worker/src/main/java/worker/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worker/target/classes/worker/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/worker/target/classes/worker/Worker.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580050011290</updated>
       <workItem from="1580050013654" duration="194000" />
-      <workItem from="1580050302541" duration="563000" />
+      <workItem from="1580050302541" duration="1069000" />
     </task>
     <servers />
   </component>
@@ -199,25 +179,25 @@
       <screen x="0" y="23" width="1680" height="964" />
     </state>
     <state x="440" y="170" key="#Project_Structure/0.23.1680.964@0.23.1680.964" timestamp="1580050037842" />
-    <state width="1638" height="259" key="GridCell.Tab.0.bottom" timestamp="1580050489119">
+    <state width="1638" height="259" key="GridCell.Tab.0.bottom" timestamp="1580051378977">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.bottom/0.23.1680.964@0.23.1680.964" timestamp="1580050489119" />
+    <state width="1638" height="259" key="GridCell.Tab.0.bottom/0.23.1680.964@0.23.1680.964" timestamp="1580051378977" />
     <state width="1105" height="259" key="GridCell.Tab.0.bottom/0.23.1680.965@0.23.1680.965" timestamp="1580050207626" />
-    <state width="1638" height="259" key="GridCell.Tab.0.center" timestamp="1580050489118">
+    <state width="1638" height="259" key="GridCell.Tab.0.center" timestamp="1580051378976">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.center/0.23.1680.964@0.23.1680.964" timestamp="1580050489118" />
+    <state width="1638" height="259" key="GridCell.Tab.0.center/0.23.1680.964@0.23.1680.964" timestamp="1580051378976" />
     <state width="1105" height="259" key="GridCell.Tab.0.center/0.23.1680.965@0.23.1680.965" timestamp="1580050207626" />
-    <state width="1638" height="259" key="GridCell.Tab.0.left" timestamp="1580050489117">
+    <state width="1638" height="259" key="GridCell.Tab.0.left" timestamp="1580051378976">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.left/0.23.1680.964@0.23.1680.964" timestamp="1580050489117" />
+    <state width="1638" height="259" key="GridCell.Tab.0.left/0.23.1680.964@0.23.1680.964" timestamp="1580051378976" />
     <state width="1105" height="259" key="GridCell.Tab.0.left/0.23.1680.965@0.23.1680.965" timestamp="1580050207625" />
-    <state width="1638" height="259" key="GridCell.Tab.0.right" timestamp="1580050489118">
+    <state width="1638" height="259" key="GridCell.Tab.0.right" timestamp="1580051378977">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.right/0.23.1680.964@0.23.1680.964" timestamp="1580050489118" />
+    <state width="1638" height="259" key="GridCell.Tab.0.right/0.23.1680.964@0.23.1680.964" timestamp="1580051378977" />
     <state width="1105" height="259" key="GridCell.Tab.0.right/0.23.1680.965@0.23.1680.965" timestamp="1580050207626" />
     <state x="349" y="144" key="SettingsEditor" timestamp="1580050056284">
       <screen x="0" y="23" width="1680" height="964" />

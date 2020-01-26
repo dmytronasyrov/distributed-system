@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f2f24b0-6da2-4595-82ad-1c38f7243d5a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker/src/main/java/worker/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/worker/src/main/java/worker/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker/target/classes/worker/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/worker/target/classes/worker/Worker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,21 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Worker">
+  <component name="RunManager" selected="Application.Healer">
+    <configuration name="Healer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="healer.Healer" />
+      <module name="healer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="healer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LeaderElection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leader.LeaderElection" />
       <module name="leader-election" />
@@ -127,6 +141,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Healer" />
         <item itemvalue="Application.Worker" />
         <item itemvalue="Application.LeaderElection" />
       </list>
@@ -163,7 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580050011290</updated>
       <workItem from="1580050013654" duration="194000" />
-      <workItem from="1580050302541" duration="1069000" />
+      <workItem from="1580050302541" duration="1229000" />
     </task>
     <servers />
   </component>
@@ -179,33 +194,33 @@
       <screen x="0" y="23" width="1680" height="964" />
     </state>
     <state x="440" y="170" key="#Project_Structure/0.23.1680.964@0.23.1680.964" timestamp="1580050037842" />
-    <state width="1638" height="259" key="GridCell.Tab.0.bottom" timestamp="1580051378977">
+    <state width="1638" height="259" key="GridCell.Tab.0.bottom" timestamp="1580051543615">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.bottom/0.23.1680.964@0.23.1680.964" timestamp="1580051378977" />
+    <state width="1638" height="259" key="GridCell.Tab.0.bottom/0.23.1680.964@0.23.1680.964" timestamp="1580051543615" />
     <state width="1105" height="259" key="GridCell.Tab.0.bottom/0.23.1680.965@0.23.1680.965" timestamp="1580050207626" />
-    <state width="1638" height="259" key="GridCell.Tab.0.center" timestamp="1580051378976">
+    <state width="1638" height="259" key="GridCell.Tab.0.center" timestamp="1580051543614">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.center/0.23.1680.964@0.23.1680.964" timestamp="1580051378976" />
+    <state width="1638" height="259" key="GridCell.Tab.0.center/0.23.1680.964@0.23.1680.964" timestamp="1580051543614" />
     <state width="1105" height="259" key="GridCell.Tab.0.center/0.23.1680.965@0.23.1680.965" timestamp="1580050207626" />
-    <state width="1638" height="259" key="GridCell.Tab.0.left" timestamp="1580051378976">
+    <state width="1638" height="259" key="GridCell.Tab.0.left" timestamp="1580051543613">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.left/0.23.1680.964@0.23.1680.964" timestamp="1580051378976" />
+    <state width="1638" height="259" key="GridCell.Tab.0.left/0.23.1680.964@0.23.1680.964" timestamp="1580051543613" />
     <state width="1105" height="259" key="GridCell.Tab.0.left/0.23.1680.965@0.23.1680.965" timestamp="1580050207625" />
-    <state width="1638" height="259" key="GridCell.Tab.0.right" timestamp="1580051378977">
+    <state width="1638" height="259" key="GridCell.Tab.0.right" timestamp="1580051543615">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.right/0.23.1680.964@0.23.1680.964" timestamp="1580051378977" />
+    <state width="1638" height="259" key="GridCell.Tab.0.right/0.23.1680.964@0.23.1680.964" timestamp="1580051543615" />
     <state width="1105" height="259" key="GridCell.Tab.0.right/0.23.1680.965@0.23.1680.965" timestamp="1580050207626" />
     <state x="349" y="144" key="SettingsEditor" timestamp="1580050056284">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
     <state x="349" y="144" key="SettingsEditor/0.23.1680.964@0.23.1680.964" timestamp="1580050056284" />
-    <state x="234" y="202" key="new project wizard" timestamp="1580050378489">
+    <state x="234" y="202" key="new project wizard" timestamp="1580051467546">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state x="234" y="202" key="new project wizard/0.23.1680.964@0.23.1680.964" timestamp="1580050378489" />
+    <state x="234" y="202" key="new project wizard/0.23.1680.964@0.23.1680.964" timestamp="1580051467546" />
   </component>
 </project>

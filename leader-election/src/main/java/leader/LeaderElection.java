@@ -45,7 +45,6 @@ public class LeaderElection implements Watcher {
         } else {
           synchronized (mZooKeeper) {
             System.out.println("Disconnected from Zookeeper event");
-
             mZooKeeper.notifyAll();
           }
         }

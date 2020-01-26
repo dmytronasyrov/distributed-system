@@ -27,8 +27,8 @@ public class Application implements Watcher {
     int port = (args.length == 1 ? Integer.parseInt(args[0]) : DEFAULT_PORT);
 
     final Application application = new Application();
-    final ZooKeeper zooKeeper = application.connectToZookeeper();
 
+    final ZooKeeper zooKeeper = application.connectToZookeeper();
     final ServiceRegistry serviceRegistry = new ServiceRegistry(zooKeeper);
     final OnElectionAction onElectionAction = new OnElectionAction(serviceRegistry, port);
 

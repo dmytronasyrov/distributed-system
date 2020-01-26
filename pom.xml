@@ -14,5 +14,6 @@
         <module>worker</module>
         <module>healer</module>
         <module>service-registry</module>
+        <module>web-server</module>
     </modules>
 </project>

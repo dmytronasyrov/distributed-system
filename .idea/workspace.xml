@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f2f24b0-6da2-4595-82ad-1c38f7243d5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/healer/target/healer-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/healer/target/healer-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/healer/target/healer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/healer/target/healer-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/healer/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/healer/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-election/target/leader.election-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/leader-election/target/leader.election-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-election/target/leader.election-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/leader-election/target/leader.election-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-election/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/leader-election/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/src/main/java/registry/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/src/main/java/registry/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/target/classes/registry/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/classes/registry/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/target/service.registry-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/service.registry-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/target/service.registry-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/service.registry-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/worker/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker/target/worker-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/worker/target/worker-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker/target/worker-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/worker/target/worker-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/down.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker/down.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runLeaderElection.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/runLeaderElection.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runServer.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/runServer.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runServiceRegistry.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/runServiceRegistry.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverRequests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/serverRequests.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker/up.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +80,13 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager" selected="Application.ServiceRegistry">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker" />
+      <recent name="$PROJECT_DIR$/scripts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="registry.Application" />
       <module name="service-registry" />
@@ -169,14 +166,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Application" />
       <item itemvalue="Application.Healer" />
       <item itemvalue="Application.LeaderElection" />
       <item itemvalue="Application.Worker" />
-      <item itemvalue="Application.ServiceRegistry" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ServiceRegistry" />
         <item itemvalue="Application.Healer" />
         <item itemvalue="Application.Worker" />
         <item itemvalue="Application.LeaderElection" />
@@ -214,7 +210,9 @@
       <option name="presentableId" value="Default" />
       <updated>1580050011290</updated>
       <workItem from="1580050013654" duration="194000" />
-      <workItem from="1580050302541" duration="14547000" />
+      <workItem from="1580050302541" duration="14635000" />
+      <workItem from="1580228020106" duration="6000" />
+      <workItem from="1580228345825" duration="290000" />
     </task>
     <servers />
   </component>
@@ -246,42 +244,42 @@
       <screen x="0" y="23" width="1680" height="964" />
     </state>
     <state x="424" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.964@0.23.1680.964" timestamp="1580066278616" />
-    <state width="1638" height="154" key="GridCell.Tab.0.bottom" timestamp="1580071879645">
+    <state width="1638" height="320" key="GridCell.Tab.0.bottom" timestamp="1580077831224">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="154" key="GridCell.Tab.0.bottom/0.23.1680.964@0.23.1680.964" timestamp="1580071879645" />
+    <state width="1638" height="320" key="GridCell.Tab.0.bottom/0.23.1680.964@0.23.1680.964" timestamp="1580077831224" />
     <state width="1105" height="259" key="GridCell.Tab.0.bottom/0.23.1680.965@0.23.1680.965" timestamp="1580050207626" />
-    <state width="1638" height="154" key="GridCell.Tab.0.center" timestamp="1580071879644">
+    <state width="1638" height="320" key="GridCell.Tab.0.center" timestamp="1580077831224">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="154" key="GridCell.Tab.0.center/0.23.1680.964@0.23.1680.964" timestamp="1580071879644" />
+    <state width="1638" height="320" key="GridCell.Tab.0.center/0.23.1680.964@0.23.1680.964" timestamp="1580077831224" />
     <state width="1105" height="259" key="GridCell.Tab.0.center/0.23.1680.965@0.23.1680.965" timestamp="1580050207626" />
-    <state width="1638" height="154" key="GridCell.Tab.0.left" timestamp="1580071879643">
+    <state width="1638" height="320" key="GridCell.Tab.0.left" timestamp="1580077831223">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="154" key="GridCell.Tab.0.left/0.23.1680.964@0.23.1680.964" timestamp="1580071879643" />
+    <state width="1638" height="320" key="GridCell.Tab.0.left/0.23.1680.964@0.23.1680.964" timestamp="1580077831223" />
     <state width="1105" height="259" key="GridCell.Tab.0.left/0.23.1680.965@0.23.1680.965" timestamp="1580050207625" />
-    <state width="1638" height="154" key="GridCell.Tab.0.right" timestamp="1580071879644">
+    <state width="1638" height="320" key="GridCell.Tab.0.right" timestamp="1580077831224">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="154" key="GridCell.Tab.0.right/0.23.1680.964@0.23.1680.964" timestamp="1580071879644" />
+    <state width="1638" height="320" key="GridCell.Tab.0.right/0.23.1680.964@0.23.1680.964" timestamp="1580077831224" />
     <state width="1105" height="259" key="GridCell.Tab.0.right/0.23.1680.965@0.23.1680.965" timestamp="1580050207626" />
-    <state width="1638" height="320" key="GridCell.Tab.1.bottom" timestamp="1580056430104">
+    <state width="1638" height="320" key="GridCell.Tab.1.bottom" timestamp="1580077831226">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="320" key="GridCell.Tab.1.bottom/0.23.1680.964@0.23.1680.964" timestamp="1580056430104" />
-    <state width="1638" height="320" key="GridCell.Tab.1.center" timestamp="1580056430103">
+    <state width="1638" height="320" key="GridCell.Tab.1.bottom/0.23.1680.964@0.23.1680.964" timestamp="1580077831226" />
+    <state width="1638" height="320" key="GridCell.Tab.1.center" timestamp="1580077831225">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="320" key="GridCell.Tab.1.center/0.23.1680.964@0.23.1680.964" timestamp="1580056430103" />
-    <state width="1638" height="320" key="GridCell.Tab.1.left" timestamp="1580056430102">
+    <state width="1638" height="320" key="GridCell.Tab.1.center/0.23.1680.964@0.23.1680.964" timestamp="1580077831225" />
+    <state width="1638" height="320" key="GridCell.Tab.1.left" timestamp="1580077831225">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="320" key="GridCell.Tab.1.left/0.23.1680.964@0.23.1680.964" timestamp="1580056430102" />
-    <state width="1638" height="320" key="GridCell.Tab.1.right" timestamp="1580056430103">
+    <state width="1638" height="320" key="GridCell.Tab.1.left/0.23.1680.964@0.23.1680.964" timestamp="1580077831225" />
+    <state width="1638" height="320" key="GridCell.Tab.1.right" timestamp="1580077831226">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
-    <state width="1638" height="320" key="GridCell.Tab.1.right/0.23.1680.964@0.23.1680.964" timestamp="1580056430103" />
+    <state width="1638" height="320" key="GridCell.Tab.1.right/0.23.1680.964@0.23.1680.964" timestamp="1580077831226" />
     <state x="349" y="144" key="SettingsEditor" timestamp="1580050056284">
       <screen x="0" y="23" width="1680" height="964" />
     </state>

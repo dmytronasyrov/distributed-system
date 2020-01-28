@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f2f24b0-6da2-4595-82ad-1c38f7243d5a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/down.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker/down.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runLeaderElection.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/runLeaderElection.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runServer.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/runServer.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runServiceRegistry.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/runServiceRegistry.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverRequests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/serverRequests.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/up.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker/up.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/healer/target/healer-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/healer/target/healer-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/healer/target/healer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/healer/target/healer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/healer/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/healer/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-election/target/leader.election-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/leader-election/target/leader.election-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-election/target/leader.election-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/leader-election/target/leader.election-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-election/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/leader-election/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/target/service.registry-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/service.registry-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/target/service.registry-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/service.registry-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-server/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server/target/server-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web-server/target/server-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server/target/server-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web-server/target/server-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worker/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/worker/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worker/target/worker-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/worker/target/worker-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worker/target/worker-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/worker/target/worker-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +222,7 @@
       <workItem from="1580050013654" duration="194000" />
       <workItem from="1580050302541" duration="14635000" />
       <workItem from="1580228020106" duration="6000" />
-      <workItem from="1580228345825" duration="290000" />
+      <workItem from="1580228345825" duration="2766000" />
     </task>
     <servers />
   </component>
@@ -236,10 +246,11 @@
       <screen x="0" y="23" width="1680" height="964" />
     </state>
     <state x="538" y="315" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.964@0.23.1680.964" timestamp="1580071914732" />
-    <state x="653" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1580075906410">
-      <screen x="0" y="23" width="1680" height="964" />
+    <state x="653" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1580228842557">
+      <screen x="0" y="23" width="1680" height="965" />
     </state>
     <state x="653" y="228" key="#com.intellij.ide.util.MemberChooser/0.23.1680.964@0.23.1680.964" timestamp="1580075906410" />
+    <state x="653" y="228" key="#com.intellij.ide.util.MemberChooser/0.23.1680.965@0.23.1680.965" timestamp="1580228842557" />
     <state x="424" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580066278616">
       <screen x="0" y="23" width="1680" height="964" />
     </state>
@@ -284,10 +295,11 @@
       <screen x="0" y="23" width="1680" height="964" />
     </state>
     <state x="349" y="144" key="SettingsEditor/0.23.1680.964@0.23.1680.964" timestamp="1580050056284" />
-    <state x="234" y="202" key="new project wizard" timestamp="1580075694046">
-      <screen x="0" y="23" width="1680" height="964" />
+    <state x="234" y="202" key="new project wizard" timestamp="1580228778393">
+      <screen x="0" y="23" width="1680" height="965" />
     </state>
     <state x="234" y="202" key="new project wizard/0.23.1680.964@0.23.1680.964" timestamp="1580075694046" />
+    <state x="234" y="202" key="new project wizard/0.23.1680.965@0.23.1680.965" timestamp="1580228778393" />
     <state x="505" y="235" width="670" height="676" key="search.everywhere.popup" timestamp="1580053132368">
       <screen x="0" y="23" width="1680" height="964" />
     </state>

@@ -15,5 +15,6 @@
         <module>healer</module>
         <module>service-registry</module>
         <module>web-server</module>
+        <module>web-client</module>
     </modules>
 </project>
